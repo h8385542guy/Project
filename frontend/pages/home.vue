@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 id="home">這是首頁</h1>
+    <h1 id="home">這是首頁@@@@</h1>
     <div>
       <p>我們可以在這邊寫一點東西...</p>
     </div>

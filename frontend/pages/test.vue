@@ -17,7 +17,7 @@
       </v-list-item>
 
       <v-card-actions>
-        <v-btn text>Button</v-btn>
+        <v-btn :color="color" text>Button</v-btn>
         <v-btn text>Button</v-btn>
       </v-card-actions>
     </v-card>
@@ -26,7 +26,13 @@
 
 <script>
 export default {
-  layout: 'custom'
+  layout: 'custom',
+  data() {
+    return {
+      abc: true,
+      color: 'blue'
+    }
+  }
 }
 </script>
 
