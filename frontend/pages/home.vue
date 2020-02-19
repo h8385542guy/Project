@@ -4,6 +4,19 @@
     <div>
       <p>我們可以在這邊寫一點東西...</p>
     </div>
+
+    <img :src="require('~/static/AAIeXUw.jpg')" />
+
+    <!-- 使用 computed 做操作 -->
+    <div>
+      <input v-model="message" type="text" placeholder="請輸入資料" />
+      <p>反轉訊息：{{ reversedMessage }}</p>
+    </div>
+
+    <!-- 使用 methods 做操作 -->
+    <v-btn @click="clickMe()">按我</v-btn>
+
+    <!-- 使用 v-for 迴圈 & 使用 component -->
     <div v-for="i in 5" :key="i">
       <cards></cards>
     </div>
@@ -17,9 +30,36 @@ export default {
   components: {
     Cards: () => import('~/components/base/Card')
   },
+  asyncData() {
+    // 放在 component 不能操作
+    return { message: '789' }
+  },
   data() {
     return {
-      imageTitle1: '這是圖片一的標題'
+      // 設定變數
+      message: '123'
+    }
+  },
+  computed: {
+    // 主動式的 function
+    reversedMessage() {
+      return this.message
+        .split('')
+        .reverse()
+        .join('')
+    }
+  },
+  mounted() {
+    // 載入資料
+    this.message = '456'
+  },
+  beforeCreate() {
+    // 這是 beforeCreate
+  },
+  methods: {
+    // 被動式的 function，例如:click 之後作用
+    clickMe() {
+      alert('你按了我!!')
     }
   }
 }
