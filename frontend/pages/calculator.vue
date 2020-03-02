@@ -2,7 +2,7 @@
   <div>
     <v-container>
       <v-card class="mx-auto" height="600" width="350">
-        <v-cad-title class="d-flex justify-center">計算機</v-cad-title>
+        <v-card-title class="d-flex justify-center">計算機</v-card-title>
         <v-row class="mx-2">
           <v-col>
             <v-text-field class="pb-0" solo disabled></v-text-field>

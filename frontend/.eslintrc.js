@@ -14,10 +14,11 @@ module.exports = {
     'plugin:prettier/recommended',
     'plugin:nuxt/recommended'
   ],
-  plugins: [
-    'prettier'
-  ],
+  plugins: ['prettier'],
   // add your custom rules here
   rules: {
+    // 將 console 與 debugger 排除在 warning 之外
+    'no-console': 'off',
+    'no-debugger': 'off'
   }
 }
