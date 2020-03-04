@@ -15,11 +15,6 @@
 
     <!-- 使用 methods 做操作 -->
     <v-btn @click="clickMe()">按我</v-btn>
-
-    <!-- 使用 v-for 迴圈 & 使用 component -->
-    <div v-for="i in 5" :key="i">
-      <cards></cards>
-    </div>
   </div>
 </template>
 
@@ -27,9 +22,7 @@
 export default {
   // 指定使用的 layout，如果不指定的話預設是 default
   layout: 'custom',
-  components: {
-    Cards: () => import('~/components/base/Card')
-  },
+  components: {},
   asyncData() {
     // 放在 component 不能操作
     return { message: '789' }
