@@ -51,6 +51,8 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+
+  proxy: {},
   /*
    ** 這邊可以調整 UI 的一些基本設定
    ** 包含深色系的配色與淺色系的配色
@@ -80,7 +82,7 @@ export default {
           success: '#4CAF50',
           info: '#2196F3',
           warning: '#FB8C00',
-          error: '#FF5252',
+          error: '#FF5252'
         }
       }
     }
